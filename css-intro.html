@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to CSS — HTML & CSS Hub</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">HTML<span>&</span>CSS</a>
+    <a href="index.html" class="home-link">← Home</a>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <header class="page-header">
+      <span class="topic-tag">Topic 8</span>
+      <h1>Introduction to CSS</h1>
+      <p class="lead">CSS (Cascading Style Sheets) is used to control the presentation and layout of HTML elements — colours, fonts, spacing, positioning, animations, and responsive design.</p>
+    </header>
+
+    <!-- WHAT IS CSS -->
+    <section class="content-section">
+      <h2>What is CSS?</h2>
+      <p><strong>CSS</strong> stands for <strong>Cascading Style Sheets</strong>. It describes how HTML elements are displayed on screen.</p>
+      <p>The word <em>cascading</em> means that a style applied to a parent element will also apply to all its children. For example, setting <code>color: blue</code> on the <code>&lt;body&gt;</code> will make all paragraphs and headings inside it blue too.</p>
+
+      <h3>Why Use CSS?</h3>
+      <p>Without CSS, all web pages would look like plain, unstyled text documents. CSS allows you to:</p>
+      <ul>
+        <li>Control colours, fonts, and text sizes</li>
+        <li>Control the layout and positioning of elements</li>
+        <li>Add backgrounds, borders, and spacing</li>
+        <li>Create responsive designs for mobile and desktop</li>
+        <li>Add animations and transitions</li>
+        <li>Control multiple pages from one file (external CSS)</li>
+      </ul>
+    </section>
+
+    <!-- CSS SYNTAX -->
+    <section class="content-section">
+      <h2>CSS Syntax</h2>
+      <p>A CSS rule is made of three parts: a <strong>selector</strong>, a <strong>property</strong>, and a <strong>value</strong>.</p>
+
+      <div class="code-block">
+        <div class="code-label">CSS — Basic Syntax</div>
+        <pre><code><span class="prop-color">selector</span> {
+  <span class="keyword-color">property</span>: <span class="val-color">value</span>;
+}
+
+<span class="comment-color">/* Example: */</span>
+<span class="prop-color">body</span> {
+  <span class="keyword-color">background-color</span>: <span class="val-color">powderblue</span>;
+  <span class="keyword-color">color</span>: <span class="val-color">#333333</span>;
+  <span class="keyword-color">font-size</span>: <span class="val-color">16px</span>;
+}</code></pre>
+      </div>
+
+      <table class="styled-table">
+        <thead><tr><th>Part</th><th>Description</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>Selector</td><td>The HTML element to style</td><td>body, h1, p, .class, #id</td></tr>
+          <tr><td>Property</td><td>What aspect to change</td><td>color, font-size, background-color</td></tr>
+          <tr><td>Value</td><td>The setting for that property</td><td>red, 16px, #ffffff</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 3 TYPES OF CSS -->
+    <section class="content-section">
+      <h2>Three Ways to Add CSS</h2>
+
+      <h3>1. Inline CSS</h3>
+      <p>Applied directly to a single HTML element using the <code>style</code> attribute. Used for quick, one-off styles.</p>
+      <div class="code-block">
+        <div class="code-label">HTML — Inline CSS</div>
+        <pre><code><span class="tag-color">&lt;h1</span> <span class="attr-color">style</span>=<span class="val-color">"color: red; font-size: 32px;"</span><span class="tag-color">&gt;</span>Red Heading<span class="tag-color">&lt;/h1&gt;</span>
+<span class="tag-color">&lt;p</span> <span class="attr-color">style</span>=<span class="val-color">"color: blue; font-family: Arial;"</span><span class="tag-color">&gt;</span>Blue paragraph<span class="tag-color">&lt;/p&gt;</span></code></pre>
+      </div>
+      <div class="output-box">
+        <span class="output-label">Output</span>
+        <div class="output-content">
+          <h1 style="color: red; font-size: 28px; font-family:Arial; margin:0 0 8px;">Red Heading</h1>
+          <p style="color: blue; font-family: Arial; font-size:14px; margin:0;">Blue paragraph</p>
+        </div>
+      </div>
+
+      <h3>2. Internal (Embedded) CSS</h3>
+      <p>Placed inside a <span class="tag-pill">&lt;style&gt;</span> block in the <code>&lt;head&gt;</code> section. Only applies to that one HTML page.</p>
+      <div class="code-block">
+        <div class="code-label">HTML — Internal CSS</div>
+        <pre><code><span class="tag-color">&lt;head&gt;</span>
+  <span class="tag-color">&lt;style&gt;</span>
+    <span class="prop-color">h1</span> { <span class="keyword-color">color</span>: <span class="val-color">green</span>; <span class="keyword-color">text-decoration</span>: <span class="val-color">underline</span>; }
+    <span class="prop-color">p</span>  { <span class="keyword-color">font-size</span>: <span class="val-color">18px</span>; <span class="keyword-color">font-family</span>: <span class="val-color">sans-serif</span>; }
+  <span class="tag-color">&lt;/style&gt;</span>
+<span class="tag-color">&lt;/head&gt;</span></code></pre>
+      </div>
+
+      <h3>3. External CSS (Best Practice ⭐)</h3>
+      <p>A separate <code>.css</code> file linked to the HTML page. This is the recommended approach — one file can style an entire website.</p>
+      <div class="code-block">
+        <div class="code-label">HTML — Linking External CSS</div>
+        <pre><code><span class="tag-color">&lt;head&gt;</span>
+  <span class="tag-color">&lt;title&gt;</span>My Website<span class="tag-color">&lt;/title&gt;</span>
+  <span class="tag-color">&lt;link</span> <span class="attr-color">rel</span>=<span class="val-color">"stylesheet"</span> <span class="attr-color">type</span>=<span class="val-color">"text/css"</span> <span class="attr-color">href</span>=<span class="val-color">"style.css"</span><span class="tag-color">&gt;</span>
+<span class="tag-color">&lt;/head&gt;</span></code></pre>
+      </div>
+      <div class="code-block">
+        <div class="code-label">CSS — style.css</div>
+        <pre><code><span class="prop-color">body</span> {
+  <span class="keyword-color">background-color</span>: <span class="val-color">lightblue</span>;
+  <span class="keyword-color">font-family</span>: <span class="val-color">Arial, sans-serif</span>;
+}
+
+<span class="prop-color">h1</span> {
+  <span class="keyword-color">color</span>: <span class="val-color">navy</span>;
+  <span class="keyword-color">font-size</span>: <span class="val-color">36px</span>;
+}
+
+<span class="prop-color">p</span> {
+  <span class="keyword-color">font-size</span>: <span class="val-color">16px</span>;
+  <span class="keyword-color">line-height</span>: <span class="val-color">1.6</span>;
+}</code></pre>
+      </div>
+    </section>
+
+    <!-- COLORS IN CSS -->
+    <section class="content-section">
+      <h2>CSS Color Formats</h2>
+      <table class="styled-table">
+        <thead><tr><th>Format</th><th>Example</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Named</td><td>red, blue, coral</td><td>140+ predefined color names</td></tr>
+          <tr><td>HEX</td><td>#ff5733</td><td>#RRGGBB — Hexadecimal (0-9, A-F)</td></tr>
+          <tr><td>RGB</td><td>rgb(255, 87, 51)</td><td>Red, Green, Blue values (0-255)</td></tr>
+          <tr><td>RGBA</td><td>rgba(255, 87, 51, 0.5)</td><td>RGB + Alpha transparency (0.0–1.0)</td></tr>
+          <tr><td>HSL</td><td>hsl(9, 100%, 60%)</td><td>Hue (0-360°), Saturation %, Lightness %</td></tr>
+        </tbody>
+      </table>
+
+      <div class="code-block">
+        <div class="code-label">CSS — Color Examples</div>
+        <pre><code><span class="prop-color">h1</span> { <span class="keyword-color">color</span>: <span class="val-color">red</span>; }                    <span class="comment-color">/* Named color */</span>
+<span class="prop-color">h2</span> { <span class="keyword-color">color</span>: <span class="val-color">#ff5733</span>; }               <span class="comment-color">/* HEX */</span>
+<span class="prop-color">h3</span> { <span class="keyword-color">color</span>: <span class="val-color">rgb(0, 128, 0)</span>; }         <span class="comment-color">/* RGB - green */</span>
+<span class="prop-color">p</span>  { <span class="keyword-color">color</span>: <span class="val-color">rgba(0, 0, 0, 0.7)</span>; }   <span class="comment-color">/* 70% opaque black */</span>
+<span class="prop-color">div</span>{ <span class="keyword-color">background-color</span>: <span class="val-color">hsl(200, 70%, 50%)</span>; }</code></pre>
+      </div>
+    </section>
+
+    <!-- COMMON CSS PROPERTIES -->
+    <section class="content-section">
+      <h2>Common CSS Properties</h2>
+      <table class="styled-table">
+        <thead><tr><th>Property</th><th>Description</th><th>Example Value</th></tr></thead>
+        <tbody>
+          <tr><td>color</td><td>Text colour</td><td>red, #ff0000, rgb(255,0,0)</td></tr>
+          <tr><td>background-color</td><td>Background fill colour</td><td>lightblue, #ffffff</td></tr>
+          <tr><td>font-family</td><td>Font type</td><td>Arial, "Times New Roman"</td></tr>
+          <tr><td>font-size</td><td>Text size</td><td>16px, 1.2em, 2rem</td></tr>
+          <tr><td>font-weight</td><td>Text thickness</td><td>normal, bold, 700</td></tr>
+          <tr><td>font-style</td><td>Italic or normal</td><td>italic, oblique, normal</td></tr>
+          <tr><td>text-align</td><td>Horizontal text alignment</td><td>left, center, right, justify</td></tr>
+          <tr><td>text-decoration</td><td>Underline, strikethrough, etc.</td><td>underline, none, line-through</td></tr>
+          <tr><td>text-transform</td><td>Capitalisation</td><td>uppercase, lowercase, capitalize</td></tr>
+          <tr><td>line-height</td><td>Vertical spacing between lines</td><td>1.5, 2, 24px</td></tr>
+          <tr><td>letter-spacing</td><td>Space between characters</td><td>1px, 0.05em</td></tr>
+          <tr><td>border</td><td>Element border</td><td>1px solid black</td></tr>
+          <tr><td>padding</td><td>Space inside the border</td><td>10px, 10px 20px</td></tr>
+          <tr><td>margin</td><td>Space outside the border</td><td>20px, 0 auto</td></tr>
+          <tr><td>width / height</td><td>Element dimensions</td><td>300px, 50%, 100vh</td></tr>
+          <tr><td>opacity</td><td>Transparency (0=invisible, 1=solid)</td><td>0.5</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- BOX MODEL -->
+    <section class="content-section">
+      <h2>The CSS Box Model</h2>
+      <p>Every HTML element is a rectangular box. The CSS box model describes the layers around it:</p>
+
+      <div style="background: #fff; border-radius:8px; padding:2rem; margin:1rem 0; text-align:center; position:relative;">
+        <div style="border: 3px dashed #999; padding: 2rem; border-radius:4px; position:relative;">
+          <div style="position:absolute; top:6px; left:50%; transform:translateX(-50%); font-size:11px; color:#999; font-family:Arial; white-space:nowrap;">MARGIN</div>
+          <div style="border: 3px solid #333; padding: 1.5rem; border-radius:4px; position:relative;">
+            <div style="position:absolute; top:6px; left:50%; transform:translateX(-50%); font-size:11px; color:#333; font-family:Arial; white-space:nowrap;">BORDER</div>
+            <div style="background: #e8f5e9; border: 3px dashed #4caf50; padding: 1rem; border-radius:4px; position:relative;">
+              <div style="position:absolute; top:4px; left:50%; transform:translateX(-50%); font-size:11px; color:#4caf50; font-family:Arial; white-space:nowrap;">PADDING</div>
+              <div style="background: #006644; color: white; padding: 1rem; border-radius:4px; text-align:center; font-family:Arial; font-size:13px; font-weight:bold;">CONTENT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <table class="styled-table">
+        <thead><tr><th>Layer</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Content</td><td>The actual text or image — controlled by width and height</td></tr>
+          <tr><td>Padding</td><td>Space INSIDE the border, between content and border (transparent)</td></tr>
+          <tr><td>Border</td><td>A line that goes around the padding and content</td></tr>
+          <tr><td>Margin</td><td>Space OUTSIDE the border, between this element and others (transparent)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="code-block">
+        <div class="code-label">CSS — Box Model Example</div>
+        <pre><code><span class="prop-color">div</span> {
+  <span class="keyword-color">width</span>: <span class="val-color">300px</span>;
+  <span class="keyword-color">padding</span>: <span class="val-color">20px</span>;
+  <span class="keyword-color">border</span>: <span class="val-color">3px solid #006644</span>;
+  <span class="keyword-color">margin</span>: <span class="val-color">15px</span>;
+  <span class="keyword-color">border-radius</span>: <span class="val-color">8px</span>;
+}</code></pre>
+      </div>
+    </section>
+
+    <!-- CSS POSITIONING -->
+    <section class="content-section">
+      <h2>CSS Positioning</h2>
+      <table class="styled-table">
+        <thead><tr><th>Value</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>static</td><td>Default — element flows normally in the document</td></tr>
+          <tr><td>relative</td><td>Positioned relative to its normal position. Moved using top/left/right/bottom</td></tr>
+          <tr><td>absolute</td><td>Positioned relative to the nearest positioned ancestor. Removed from normal flow</td></tr>
+          <tr><td>fixed</td><td>Positioned relative to the browser viewport. Stays in place when scrolling</td></tr>
+          <tr><td>sticky</td><td>Toggles between relative and fixed based on scroll position</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- MEDIA QUERIES -->
+    <section class="content-section">
+      <h2>Media Queries — Responsive Design</h2>
+      <p>Media queries apply different styles based on the screen size, making websites look good on phones, tablets, and desktops.</p>
+
+      <div class="code-block">
+        <div class="code-label">CSS — Media Query Example</div>
+        <pre><code><span class="comment-color">/* Desktop (large screens above 1024px) */</span>
+<span class="keyword-color">@media</span> (<span class="prop-color">min-width</span>: <span class="val-color">1025px</span>) {
+  <span class="prop-color">body</span> { <span class="keyword-color">font-size</span>: <span class="val-color">18px</span>; }
+}
+
+<span class="comment-color">/* Tablet (768px to 1024px) */</span>
+<span class="keyword-color">@media</span> (<span class="prop-color">min-width</span>: <span class="val-color">768px</span>) <span class="keyword-color">and</span> (<span class="prop-color">max-width</span>: <span class="val-color">1024px</span>) {
+  <span class="prop-color">body</span> { <span class="keyword-color">font-size</span>: <span class="val-color">16px</span>; }
+}
+
+<span class="comment-color">/* Smartphone (below 768px) */</span>
+<span class="keyword-color">@media</span> (<span class="prop-color">max-width</span>: <span class="val-color">767px</span>) {
+  <span class="prop-color">body</span> { <span class="keyword-color">font-size</span>: <span class="val-color">14px</span>; }
+  <span class="prop-color">.sidebar</span> { <span class="keyword-color">display</span>: <span class="val-color">none</span>; } <span class="comment-color">/* Hide sidebar on mobile */</span>
+}</code></pre>
+      </div>
+
+      <div class="info-card tip">
+        <div class="card-title">💡 Pro Tip</div>
+        <p style="margin:0; color:var(--text-muted); font-size:0.85rem;">This very website you are reading uses an <strong style="color:var(--text-primary);">external CSS file (style.css)</strong> with media queries, custom properties (variables), and all the CSS techniques you've just learned. View the source code to see it in action!</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>HTML &amp; CSS Learning Hub &nbsp;|&nbsp; <strong>Website Development Module — Level 3 SWD A&amp;B</strong></p>
+    </div>
+  </footer>
+
+</body>
+</html>

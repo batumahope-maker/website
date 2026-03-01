@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Formatting Tags — HTML & CSS Hub</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">HTML<span>&</span>CSS</a>
+    <a href="index.html" class="home-link">← Home</a>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <header class="page-header">
+      <span class="topic-tag">Topic 7</span>
+      <h1>Text Formatting Tags</h1>
+      <p class="lead">HTML provides many tags for formatting text — making it bold, italic, underlined, highlighted, superscript, subscript, and more. These tags control both appearance and semantic meaning.</p>
+    </header>
+
+    <!-- HEADING TAGS -->
+    <section class="content-section">
+      <h2>Heading Tags &lt;h1&gt; to &lt;h6&gt;</h2>
+      <p>HTML provides 6 levels of headings. <span class="tag-pill">&lt;h1&gt;</span> is the largest and most important; <span class="tag-pill">&lt;h6&gt;</span> is the smallest. There should only be ONE &lt;h1&gt; per page.</p>
+
+      <div class="code-block">
+        <div class="code-label">HTML — Heading Tags</div>
+        <pre><code><span class="tag-color">&lt;h1&gt;</span>Heading Level 1<span class="tag-color">&lt;/h1&gt;</span>
+<span class="tag-color">&lt;h2&gt;</span>Heading Level 2<span class="tag-color">&lt;/h2&gt;</span>
+<span class="tag-color">&lt;h3&gt;</span>Heading Level 3<span class="tag-color">&lt;/h3&gt;</span>
+<span class="tag-color">&lt;h4&gt;</span>Heading Level 4<span class="tag-color">&lt;/h4&gt;</span>
+<span class="tag-color">&lt;h5&gt;</span>Heading Level 5<span class="tag-color">&lt;/h5&gt;</span>
+<span class="tag-color">&lt;h6&gt;</span>Heading Level 6<span class="tag-color">&lt;/h6&gt;</span></code></pre>
+      </div>
+
+      <div class="output-box">
+        <span class="output-label">Output</span>
+        <div class="output-content">
+          <h1 style="font-size:28px; margin:4px 0; font-family:Arial;">Heading Level 1</h1>
+          <h2 style="font-size:22px; margin:4px 0; font-family:Arial;">Heading Level 2</h2>
+          <h3 style="font-size:18px; margin:4px 0; font-family:Arial;">Heading Level 3</h3>
+          <h4 style="font-size:15px; margin:4px 0; font-family:Arial;">Heading Level 4</h4>
+          <h5 style="font-size:13px; margin:4px 0; font-family:Arial;">Heading Level 5</h5>
+          <h6 style="font-size:11px; margin:4px 0; font-family:Arial;">Heading Level 6</h6>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMATTING TAGS REFERENCE -->
+    <section class="content-section">
+      <h2>Formatting Tags Reference</h2>
+      <table class="styled-table">
+        <thead>
+          <tr><th>Tag</th><th>Purpose</th><th>Result</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>&lt;b&gt;</td><td>Bold text (visual only)</td><td><b>Bold text</b></td></tr>
+          <tr><td>&lt;strong&gt;</td><td>Important text (semantic bold)</td><td><strong>Important text</strong></td></tr>
+          <tr><td>&lt;i&gt;</td><td>Italic text (stylistic)</td><td><i>Italic text</i></td></tr>
+          <tr><td>&lt;em&gt;</td><td>Emphasised text (semantic italic)</td><td><em>Emphasised text</em></td></tr>
+          <tr><td>&lt;u&gt;</td><td>Underlined text</td><td><u>Underlined text</u></td></tr>
+          <tr><td>&lt;mark&gt;</td><td>Highlighted/marked text</td><td><mark>Highlighted text</mark></td></tr>
+          <tr><td>&lt;small&gt;</td><td>Smaller text</td><td><small>Smaller text</small></td></tr>
+          <tr><td>&lt;del&gt;</td><td>Deleted / strikethrough text</td><td><del>Deleted text</del></td></tr>
+          <tr><td>&lt;ins&gt;</td><td>Inserted / underlined text</td><td><ins>Inserted text</ins></td></tr>
+          <tr><td>&lt;sub&gt;</td><td>Subscript text</td><td>H<sub>2</sub>O</td></tr>
+          <tr><td>&lt;sup&gt;</td><td>Superscript text</td><td>E=mc<sup>2</sup></td></tr>
+          <tr><td>&lt;code&gt;</td><td>Inline code (monospace font)</td><td><code>print("hello")</code></td></tr>
+          <tr><td>&lt;pre&gt;</td><td>Preformatted text (preserves spaces)</td><td>Used for code blocks</td></tr>
+          <tr><td>&lt;blockquote&gt;</td><td>Long quotation (indented)</td><td>Used for quotes</td></tr>
+          <tr><td>&lt;q&gt;</td><td>Short inline quotation</td><td><q>Short quote</q></td></tr>
+          <tr><td>&lt;abbr&gt;</td><td>Abbreviation with tooltip</td><td><abbr title="HyperText Markup Language">HTML</abbr></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- LIVE EXAMPLES -->
+    <section class="content-section">
+      <h2>Live Code Examples</h2>
+
+      <h3>Bold and Italic</h3>
+      <div class="code-block">
+        <div class="code-label">HTML</div>
+        <pre><code><span class="tag-color">&lt;p&gt;</span>This is <span class="tag-color">&lt;b&gt;</span>bold<span class="tag-color">&lt;/b&gt;</span> and this is <span class="tag-color">&lt;strong&gt;</span>strongly important<span class="tag-color">&lt;/strong&gt;</span>.<span class="tag-color">&lt;/p&gt;</span>
+<span class="tag-color">&lt;p&gt;</span>This is <span class="tag-color">&lt;i&gt;</span>italic<span class="tag-color">&lt;/i&gt;</span> and this is <span class="tag-color">&lt;em&gt;</span>emphasised<span class="tag-color">&lt;/em&gt;</span>.<span class="tag-color">&lt;/p&gt;</span></code></pre>
+      </div>
+      <div class="output-box">
+        <span class="output-label">Output</span>
+        <div class="output-content" style="font-family:Arial; font-size:14px; line-height:1.8;">
+          <p>This is <b>bold</b> and this is <strong>strongly important</strong>.</p>
+          <p>This is <i>italic</i> and this is <em>emphasised</em>.</p>
+        </div>
+      </div>
+
+      <h3>Mark, Del, Ins, and Small</h3>
+      <div class="code-block">
+        <div class="code-label">HTML</div>
+        <pre><code><span class="tag-color">&lt;p&gt;</span>The price was <span class="tag-color">&lt;del&gt;</span>$50<span class="tag-color">&lt;/del&gt;</span> now <span class="tag-color">&lt;ins&gt;</span>$30<span class="tag-color">&lt;/ins&gt;</span>.<span class="tag-color">&lt;/p&gt;</span>
+<span class="tag-color">&lt;p&gt;</span>Remember to <span class="tag-color">&lt;mark&gt;</span>study HTML<span class="tag-color">&lt;/mark&gt;</span> for the exam.<span class="tag-color">&lt;/p&gt;</span>
+<span class="tag-color">&lt;p&gt;</span>Normal text. <span class="tag-color">&lt;small&gt;</span>This is smaller text.<span class="tag-color">&lt;/small&gt;</span><span class="tag-color">&lt;/p&gt;</span></code></pre>
+      </div>
+      <div class="output-box">
+        <span class="output-label">Output</span>
+        <div class="output-content" style="font-family:Arial; font-size:14px; line-height:1.8;">
+          <p>The price was <del>$50</del> now <ins>$30</ins>.</p>
+          <p>Remember to <mark>study HTML</mark> for the exam.</p>
+          <p>Normal text. <small>This is smaller text.</small></p>
+        </div>
+      </div>
+
+      <h3>Subscript and Superscript</h3>
+      <div class="code-block">
+        <div class="code-label">HTML</div>
+        <pre><code><span class="tag-color">&lt;p&gt;</span>Water formula: H<span class="tag-color">&lt;sub&gt;</span>2<span class="tag-color">&lt;/sub&gt;</span>O<span class="tag-color">&lt;/p&gt;</span>
+<span class="tag-color">&lt;p&gt;</span>Einstein: E = mc<span class="tag-color">&lt;sup&gt;</span>2<span class="tag-color">&lt;/sup&gt;</span><span class="tag-color">&lt;/p&gt;</span>
+<span class="tag-color">&lt;p&gt;</span>CO<span class="tag-color">&lt;sub&gt;</span>2<span class="tag-color">&lt;/sub&gt;</span> is carbon dioxide<span class="tag-color">&lt;/p&gt;</span></code></pre>
+      </div>
+      <div class="output-box">
+        <span class="output-label">Output</span>
+        <div class="output-content" style="font-family:Arial; font-size:14px; line-height:1.8;">
+          <p>Water formula: H<sub>2</sub>O</p>
+          <p>Einstein: E = mc<sup>2</sup></p>
+          <p>CO<sub>2</sub> is carbon dioxide</p>
+        </div>
+      </div>
+
+      <h3>Blockquote and Inline Quote</h3>
+      <div class="code-block">
+        <div class="code-label">HTML</div>
+        <pre><code><span class="tag-color">&lt;blockquote&gt;</span>
+  "The only way to learn a new programming language
+   is by writing programs in it." — Dennis Ritchie
+<span class="tag-color">&lt;/blockquote&gt;</span>
+
+<span class="tag-color">&lt;p&gt;</span>As Einstein said: <span class="tag-color">&lt;q&gt;</span>Imagination is more important than knowledge.<span class="tag-color">&lt;/q&gt;</span><span class="tag-color">&lt;/p&gt;</span></code></pre>
+      </div>
+      <div class="output-box">
+        <span class="output-label">Output</span>
+        <div class="output-content" style="font-family:Arial; font-size:14px; line-height:1.8;">
+          <blockquote style="border-left:4px solid #ccc; padding-left:16px; color:#555; margin:0 0 12px 0;">
+            "The only way to learn a new programming language is by writing programs in it." — Dennis Ritchie
+          </blockquote>
+          <p>As Einstein said: <q>Imagination is more important than knowledge.</q></p>
+        </div>
+      </div>
+
+      <h3>Code Tag</h3>
+      <div class="code-block">
+        <div class="code-label">HTML</div>
+        <pre><code><span class="tag-color">&lt;p&gt;</span>Use the <span class="tag-color">&lt;code&gt;</span>print()<span class="tag-color">&lt;/code&gt;</span> function to display output in Python.<span class="tag-color">&lt;/p&gt;</span>
+<span class="tag-color">&lt;p&gt;</span>In CSS, use <span class="tag-color">&lt;code&gt;</span>color: red;<span class="tag-color">&lt;/code&gt;</span> to change text colour.<span class="tag-color">&lt;/p&gt;</span></code></pre>
+      </div>
+      <div class="output-box">
+        <span class="output-label">Output</span>
+        <div class="output-content" style="font-family:Arial; font-size:14px; line-height:1.8;">
+          <p>Use the <code style="background:#eee; padding:2px 5px; border-radius:3px; font-family:monospace;">print()</code> function to display output in Python.</p>
+          <p>In CSS, use <code style="background:#eee; padding:2px 5px; border-radius:3px; font-family:monospace;">color: red;</code> to change text colour.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARAGRAPH AND BREAKS -->
+    <section class="content-section">
+      <h2>Paragraph and Line Break Tags</h2>
+      <div class="code-block">
+        <div class="code-label">HTML</div>
+        <pre><code><span class="tag-color">&lt;p&gt;</span>This is the first paragraph.<span class="tag-color">&lt;/p&gt;</span>
+<span class="tag-color">&lt;p&gt;</span>This is the second paragraph.<span class="tag-color">&lt;/p&gt;</span>
+
+<span class="comment-color">&lt;!-- Line break inside a paragraph --&gt;</span>
+<span class="tag-color">&lt;p&gt;</span>Line one.<span class="tag-color">&lt;br&gt;</span>Line two on a new line.<span class="tag-color">&lt;br&gt;</span>Line three.<span class="tag-color">&lt;/p&gt;</span>
+
+<span class="comment-color">&lt;!-- Horizontal rule --&gt;</span>
+<span class="tag-color">&lt;hr&gt;</span></code></pre>
+      </div>
+
+      <div class="output-box">
+        <span class="output-label">Output</span>
+        <div class="output-content" style="font-family:Arial; font-size:14px; line-height:1.8;">
+          <p>This is the first paragraph.</p>
+          <p>This is the second paragraph.</p>
+          <p>Line one.<br>Line two on a new line.<br>Line three.</p>
+          <hr style="border: 1px solid #ccc;">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>HTML &amp; CSS Learning Hub &nbsp;|&nbsp; <strong>Website Development Module — Level 3 SWD A&amp;B</strong></p>
+    </div>
+  </footer>
+
+</body>
+</html>

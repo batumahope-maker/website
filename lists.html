@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Tags — HTML & CSS Hub</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">HTML<span>&</span>CSS</a>
+    <a href="index.html" class="home-link">← Home</a>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <header class="page-header">
+      <span class="topic-tag">Topic 4</span>
+      <h1>List Tags</h1>
+      <p class="lead">HTML lists are used to display collections of items. There are three types: unordered lists (bullets), ordered lists (numbers), and description lists (terms with definitions).</p>
+    </header>
+
+    <!-- TYPES OF LISTS -->
+    <section class="content-section">
+      <h2>The Three Types of HTML Lists</h2>
+      <table class="styled-table">
+        <thead>
+          <tr><th>Type</th><th>Tag</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Unordered List</td><td>&lt;ul&gt;</td><td>Items displayed with bullet points — no particular order</td></tr>
+          <tr><td>Ordered List</td><td>&lt;ol&gt;</td><td>Items displayed with numbers or letters — in a specific order</td></tr>
+          <tr><td>Description List</td><td>&lt;dl&gt;</td><td>Terms and their descriptions — like a glossary</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- UNORDERED LIST -->
+    <section class="content-section">
+      <h2>1. Unordered List &lt;ul&gt;</h2>
+      <p>An unordered list displays items with bullet points. Each item is wrapped in <span class="tag-pill">&lt;li&gt;</span> tags. The <code>type</code> attribute changes the bullet style.</p>
+
+      <table class="styled-table">
+        <thead><tr><th>Attribute</th><th>Bullet Style</th></tr></thead>
+        <tbody>
+          <tr><td>&lt;ul type="disc"&gt;</td><td>● Filled circle (default)</td></tr>
+          <tr><td>&lt;ul type="circle"&gt;</td><td>○ Hollow circle</td></tr>
+          <tr><td>&lt;ul type="square"&gt;</td><td>■ Square</td></tr>
+        </tbody>
+      </table>
+
+      <div class="code-block">
+        <div class="code-label">HTML — Unordered List</div>
+        <pre><code><span class="tag-color">&lt;ul</span> <span class="attr-color">type</span>=<span class="val-color">"disc"</span><span class="tag-color">&gt;</span>
+  <span class="tag-color">&lt;li&gt;</span>Beetroot<span class="tag-color">&lt;/li&gt;</span>
+  <span class="tag-color">&lt;li&gt;</span>Ginger<span class="tag-color">&lt;/li&gt;</span>
+  <span class="tag-color">&lt;li&gt;</span>Potato<span class="tag-color">&lt;/li&gt;</span>
+  <span class="tag-color">&lt;li&gt;</span>Radish<span class="tag-color">&lt;/li&gt;</span>
+<span class="tag-color">&lt;/ul&gt;</span></code></pre>
+      </div>
+
+      <div class="output-box">
+        <span class="output-label">Output</span>
+        <div class="output-content">
+          <ul style="font-family:Arial; font-size:14px; padding-left:20px;">
+            <li>Beetroot</li>
+            <li>Ginger</li>
+            <li>Potato</li>
+            <li>Radish</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDERED LIST -->
+    <section class="content-section">
+      <h2>2. Ordered List &lt;ol&gt;</h2>
+      <p>An ordered list numbers items sequentially. The <code>type</code> attribute changes the numbering style. The <code>start</code> attribute sets the starting number.</p>
+
+      <table class="styled-table">
+        <thead><tr><th>Attribute</th><th>Numbering Style</th></tr></thead>
+        <tbody>
+          <tr><td>&lt;ol type="1"&gt;</td><td>1, 2, 3, 4 (default numerals)</td></tr>
+          <tr><td>&lt;ol type="A"&gt;</td><td>A, B, C, D (uppercase letters)</td></tr>
+          <tr><td>&lt;ol type="a"&gt;</td><td>a, b, c, d (lowercase letters)</td></tr>
+          <tr><td>&lt;ol type="I"&gt;</td><td>I, II, III, IV (uppercase Roman)</td></tr>
+          <tr><td>&lt;ol type="i"&gt;</td><td>i, ii, iii, iv (lowercase Roman)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="code-block">
+        <div class="code-label">HTML — Ordered List (Uppercase Letters, Start at D)</div>
+        <pre><code><span class="tag-color">&lt;ol</span> <span class="attr-color">type</span>=<span class="val-color">"A"</span> <span class="attr-color">start</span>=<span class="val-color">"4"</span><span class="tag-color">&gt;</span>
+  <span class="tag-color">&lt;li&gt;</span>HTML Basics<span class="tag-color">&lt;/li&gt;</span>
+  <span class="tag-color">&lt;li&gt;</span>CSS Styling<span class="tag-color">&lt;/li&gt;</span>
+  <span class="tag-color">&lt;li&gt;</span>JavaScript<span class="tag-color">&lt;/li&gt;</span>
+<span class="tag-color">&lt;/ol&gt;</span></code></pre>
+      </div>
+
+      <div class="output-box">
+        <span class="output-label">Output</span>
+        <div class="output-content">
+          <ol type="A" start="4" style="font-family:Arial; font-size:14px; padding-left:20px;">
+            <li>HTML Basics</li>
+            <li>CSS Styling</li>
+            <li>JavaScript</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="code-block">
+        <div class="code-label">HTML — Ordered List (Roman Numerals)</div>
+        <pre><code><span class="tag-color">&lt;ol</span> <span class="attr-color">type</span>=<span class="val-color">"I"</span><span class="tag-color">&gt;</span>
+  <span class="tag-color">&lt;li&gt;</span>Introduction<span class="tag-color">&lt;/li&gt;</span>
+  <span class="tag-color">&lt;li&gt;</span>Main Content<span class="tag-color">&lt;/li&gt;</span>
+  <span class="tag-color">&lt;li&gt;</span>Conclusion<span class="tag-color">&lt;/li&gt;</span>
+<span class="tag-color">&lt;/ol&gt;</span></code></pre>
+      </div>
+
+      <div class="output-box">
+        <span class="output-label">Output</span>
+        <div class="output-content">
+          <ol type="I" style="font-family:Arial; font-size:14px; padding-left:20px;">
+            <li>Introduction</li>
+            <li>Main Content</li>
+            <li>Conclusion</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESCRIPTION LIST -->
+    <section class="content-section">
+      <h2>3. Description List &lt;dl&gt;</h2>
+      <p>A description list is used to display terms (<span class="tag-pill">&lt;dt&gt;</span>) and their definitions (<span class="tag-pill">&lt;dd&gt;</span>), like a glossary or dictionary.</p>
+
+      <table class="styled-table">
+        <thead><tr><th>Tag</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>&lt;dl&gt;</td><td>Description List — wraps the whole list</td></tr>
+          <tr><td>&lt;dt&gt;</td><td>Description Term — the word or phrase being defined</td></tr>
+          <tr><td>&lt;dd&gt;</td><td>Description Definition — the explanation of the term</td></tr>
+        </tbody>
+      </table>
+
+      <div class="code-block">
+        <div class="code-label">HTML — Description List</div>
+        <pre><code><span class="tag-color">&lt;dl&gt;</span>
+  <span class="tag-color">&lt;dt&gt;</span>HTML<span class="tag-color">&lt;/dt&gt;</span>
+  <span class="tag-color">&lt;dd&gt;</span>HyperText Markup Language — used to structure web pages<span class="tag-color">&lt;/dd&gt;</span>
+
+  <span class="tag-color">&lt;dt&gt;</span>CSS<span class="tag-color">&lt;/dt&gt;</span>
+  <span class="tag-color">&lt;dd&gt;</span>Cascading Style Sheets — used to style web pages<span class="tag-color">&lt;/dd&gt;</span>
+
+  <span class="tag-color">&lt;dt&gt;</span>JavaScript<span class="tag-color">&lt;/dt&gt;</span>
+  <span class="tag-color">&lt;dd&gt;</span>A programming language used to add interactivity<span class="tag-color">&lt;/dd&gt;</span>
+<span class="tag-color">&lt;/dl&gt;</span></code></pre>
+      </div>
+
+      <div class="output-box">
+        <span class="output-label">Output</span>
+        <div class="output-content">
+          <dl style="font-family:Arial; font-size:14px;">
+            <dt style="font-weight:bold; margin-top:8px;">HTML</dt>
+            <dd style="margin-left:24px; color:#555;">HyperText Markup Language — used to structure web pages</dd>
+            <dt style="font-weight:bold; margin-top:8px;">CSS</dt>
+            <dd style="margin-left:24px; color:#555;">Cascading Style Sheets — used to style web pages</dd>
+            <dt style="font-weight:bold; margin-top:8px;">JavaScript</dt>
+            <dd style="margin-left:24px; color:#555;">A programming language used to add interactivity</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- NESTED LISTS -->
+    <section class="content-section">
+      <h2>Nested Lists</h2>
+      <p>You can nest a list inside another list item to create a hierarchy:</p>
+
+      <div class="code-block">
+        <div class="code-label">HTML — Nested List</div>
+        <pre><code><span class="tag-color">&lt;ul&gt;</span>
+  <span class="tag-color">&lt;li&gt;</span>Front-End
+    <span class="tag-color">&lt;ul&gt;</span>
+      <span class="tag-color">&lt;li&gt;</span>HTML<span class="tag-color">&lt;/li&gt;</span>
+      <span class="tag-color">&lt;li&gt;</span>CSS<span class="tag-color">&lt;/li&gt;</span>
+      <span class="tag-color">&lt;li&gt;</span>JavaScript<span class="tag-color">&lt;/li&gt;</span>
+    <span class="tag-color">&lt;/ul&gt;</span>
+  <span class="tag-color">&lt;/li&gt;</span>
+  <span class="tag-color">&lt;li&gt;</span>Back-End
+    <span class="tag-color">&lt;ol&gt;</span>
+      <span class="tag-color">&lt;li&gt;</span>Python<span class="tag-color">&lt;/li&gt;</span>
+      <span class="tag-color">&lt;li&gt;</span>Node.js<span class="tag-color">&lt;/li&gt;</span>
+    <span class="tag-color">&lt;/ol&gt;</span>
+  <span class="tag-color">&lt;/li&gt;</span>
+<span class="tag-color">&lt;/ul&gt;</span></code></pre>
+      </div>
+
+      <div class="output-box">
+        <span class="output-label">Output</span>
+        <div class="output-content">
+          <ul style="font-family:Arial; font-size:14px; padding-left:20px;">
+            <li>Front-End
+              <ul style="padding-left:20px; margin-top:4px;">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </li>
+            <li>Back-End
+              <ol style="padding-left:20px; margin-top:4px;">
+                <li>Python</li>
+                <li>Node.js</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="content-section">
+      <h2>Quick Reference Summary</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+        <span class="tag-pill">&lt;ul&gt; — Unordered list</span>
+        <span class="tag-pill">&lt;ol&gt; — Ordered list</span>
+        <span class="tag-pill">&lt;li&gt; — List item</span>
+        <span class="tag-pill">&lt;dl&gt; — Description list</span>
+        <span class="tag-pill">&lt;dt&gt; — Term</span>
+        <span class="tag-pill">&lt;dd&gt; — Definition</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>HTML &amp; CSS Learning Hub &nbsp;|&nbsp; <strong>Website Development Module — Level 3 SWD A&amp;B</strong></p>
+    </div>
+  </footer>
+
+</body>
+</html>
